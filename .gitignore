@@ -1,0 +1,21 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+# Android Studio / IntelliJ
+.idea/
+*.iml
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+# Signing (never commit your keystore or passwords)
+*.jks
+*.keystore
+keystore.properties
+# OS
+.DS_Store
+Thumbs.db
+# Tool scratch
+tools/__pycache__/
+tools/out/

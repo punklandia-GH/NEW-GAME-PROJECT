@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ==========================================================================
+   MONETIZATION IDS  -  THIS IS THE ONLY FILE YOU NEED TO EDIT FOR ADS / IAP
+  ==========================================================================
+
+  The four AdMob values below are Google's OFFICIAL TEST IDs. They always
+  serve test ads and are safe to use while developing.
+
+  Before you publish:
+    1. Sign in to https://apps.admob.com, create an app and three ad units
+       (Banner, Interstitial, Rewarded).
+    2. Paste your App ID over admob_app_id (keep the "~").
+    3. Paste each ad unit ID over the matching value (keep the "/").
+    4. In Google Play Console, create a one-time in-app product with the
+       product ID below (remove_ads) or change the value here to match.
+
+  Never click your own live ads. Leave the test IDs in place until the app
+  is approved in AdMob, otherwise your account may be limited.
+-->
+<resources>
+
+    <!-- AdMob App ID (Settings > App settings in AdMob). -->
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+
+    <!-- Banner ad unit: shown at the bottom of the Home screen only. -->
+    <string name="admob_banner_id" translatable="false">ca-app-pub-3940256099942544/9214589741</string>
+
+    <!-- Interstitial ad unit: after a game over, at most once per 3 games and once per 3 minutes. -->
+    <string name="admob_interstitial_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!-- Rewarded ad unit: "Watch an ad to continue" on the Game Over screen (once per game). -->
+    <string name="admob_rewarded_id" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
+
+    <!-- Google Play Billing product ID for the one-time "Remove Ads" purchase. -->
+    <string name="iap_remove_ads_product_id" translatable="false">remove_ads</string>
+
+    <!--
+      Optional: the web address where you host the privacy policy
+      (docs/PRIVACY_POLICY.md). While this is empty the Settings screen opens
+      the built-in privacy policy page inside the app instead.
+      Example: https://yourname.github.io/block-crush-privacy
+    -->
+    <string name="privacy_policy_url" translatable="false"></string>
+
+</resources>

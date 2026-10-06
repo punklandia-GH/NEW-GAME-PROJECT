@@ -1,0 +1,60 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.blockcrush.puzzle'
+    compileSdk 36
+
+    defaultConfig {
+        // Change this if you want a different package name on Google Play.
+        // It must be unique on the Play Store and cannot be changed after publishing.
+        applicationId "com.blockcrush.puzzle"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaLanguageVersion.of(17)
+        targetCompatibility = JavaLanguageVersion.of(17)
+    }
+
+    bundle {
+        language { enableSplit = true }
+        density { enableSplit = true }
+        abi { enableSplit = true }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
+    }
+}
+
+dependencies {
+    // Google Mobile Ads (AdMob): banner, interstitial and rewarded ads.
+    implementation 'com.google.android.gms:play-services-ads:25.5.0'
+    // Google User Messaging Platform: GDPR / UK / EU consent form.
+    implementation 'com.google.android.ump:user-messaging-platform:4.0.0'
+    // Google Play Billing: the one-time "Remove Ads" purchase.
+    implementation 'com.android.billingclient:billing:9.1.0'
+
+    // Unit tests for the game logic (run with: ./gradlew testDebugUnitTest).
+    testImplementation 'junit:junit:4.13.2'
+}
